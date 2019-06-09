@@ -1,8 +1,10 @@
-#include "PM25.h"
-#include "CCS811_Compensated.h"
-#include "DS18B20.h"
-#include "MG811.h"
-#include "MQ131.h"
+#include "src/APRS/APRS.h"
+
+#include "SRC/PM25/PM25.h"
+#include "src/CCS811_Compensated/CCS811_Compensated.h"
+#include "src/DS18B20/DS18B20.h"
+#include "src/MG811/MG811.h"
+#include <MQ131.h>
 
 #include <SoftwareSerial.h>
 #include <Wire.h>
