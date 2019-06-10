@@ -19,6 +19,8 @@ DS18B20 temp(4);
 MG811 co2(A0, 0.5875, 0.030);
 MQ131 ozone(2,A0, LOW_CONCENTRATION, 10000);
 
+SoftwareSerial aprs(8, 9);
+
 void setup() {
   Serial.begin(115200);
   ozone.calibrate();
