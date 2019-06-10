@@ -2,6 +2,7 @@
 
 PM25::PM25(int rxPin, int txPin) : _pm25Serial(SoftwareSerial(rxPin,txPin)) {
     _pm25Serial.begin(9600);
+    Serial.println("PM25 Ready");
 }
 
 boolean PM25::readData() {

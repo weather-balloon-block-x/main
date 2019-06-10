@@ -2,6 +2,7 @@
 
 CCS811Compensated::CCS811Compensated(int ccs811Addr, int bme280Addr) : _ccs811(CCS811(ccs811Addr)), _bme280(BME280()) {
     CCS811Core::status returnCode = _ccs811.begin();
+    Serial.println("CCS811 Ready");
 
     if (returnCode != CCS811Core::SENSOR_SUCCESS) {
         Serial.println("CCS811 Error");
@@ -15,6 +16,7 @@ CCS811Compensated::CCS811Compensated(int ccs811Addr, int bme280Addr) : _ccs811(C
     _bme280.settings.tempOverSample = 5;
     _bme280.settings.pressOverSample = 5;
     _bme280.settings.humidOverSample = 5;
+    Serial.println("BME280 Ready");
 }
 
 boolean CCS811Compensated::readData() {

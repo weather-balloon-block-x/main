@@ -3,6 +3,7 @@
 MG811::MG811(int analogPort, float zeroPoint, float reactionVoltage) :
   _calibrationCurve{2.602, zeroPoint, reactionVoltage/(2.602-3)} {
     _analogPort = analogPort;
+    Serial.println("MG811 Ready");
 }
 
 int MG811::getAnalog() {
